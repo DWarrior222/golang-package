@@ -24,16 +24,17 @@ func scanln() {
 }
 
 func sscan() {
-	var str string = "aa bb cc"
+	// str用空格分隔还是"\n"分隔，都看作空格
+	var str string = "aa\nbb\ncc"
 	var a, b, c string
 	fmt.Sscan(str, &a, &b, &c)
 	fmt.Println(a, b, c)
 }
 
 func sscanf() {
-	var str string = "aa,bb,cc"
+	var str string = "aa bb cc"
 	var a, b, c string
-	fmt.Sscanf(str, "%s,%s,%s", &a, &b, &c)
+	fmt.Sscanf(str, "%s%s%s", &a, &b, &c)
 	fmt.Println(a, b, c)
 }
 
@@ -124,10 +125,10 @@ func main() {
 	// scanf()
 	// scanln()
 	// sscan()
-	// sscanf()
+	sscanf()
 	// sscanln()
 	// fscan()
 	// fscan2()
 	// fscanf()
-	fscanln()
+	// fscanln()
 }
